@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Metrone — Custoza, Verona</title>
+  <meta name="description" content="Il Metrone: dimora di campagna tra i vigneti di Custoza, a pochi minuti da Verona e dal Lago di Garda. Prenotazione diretta.">
+  <meta property="og:title" content="Il Metrone — Custoza, Verona">
+  <meta property="og:description" content="Una dimora autentica tra i vigneti del Bianco di Custoza.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.metronecustoza.com">
+  <meta property="og:image" content="images/hero/hero-1.jpg">
+  <link rel="canonical" href="https://www.metronecustoza.com/">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">
+        <strong>Il Metrone</strong>
+        <small>Custoza · Verona</small>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#property" class="nav__link" data-i18n="nav.property">La Proprietà</a></li>
+        <li><a href="#surroundings" class="nav__link" data-i18n="nav.surroundings">Custoza & Dintorni</a></li>
+        <li><a href="#story" class="nav__link" data-i18n="nav.story">La Storia</a></li>
+        <li><a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galleria</a></li>
+        <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contatti</a></li>
+      </ul>
+      <div class="nav__right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="it">IT</button><span>·</span>
+          <button type="button" data-lang="en">EN</button><span>·</span>
+          <button type="button" data-lang="de">DE</button>
+        </div>
+        <a href="book.html" class="nav__cta" data-i18n="nav.book">Prenota</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <a href="#property" data-i18n="nav.property">La Proprietà</a>
+    <a href="#surroundings" data-i18n="nav.surroundings">Custoza & Dintorni</a>
+    <a href="#story" data-i18n="nav.story">La Storia</a>
+    <a href="#gallery" data-i18n="nav.gallery">Galleria</a>
+    <a href="#contact" data-i18n="nav.contact">Contatti</a>
+    <a href="book.html" class="btn btn--dark" data-i18n="nav.book">Prenota</a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="it">IT</button><span>·</span>
+      <button type="button" data-lang="en">EN</button><span>·</span>
+      <button type="button" data-lang="de">DE</button>
+    </div>
+  </div>
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="hero" id="top">
+    <div class="hero__bg">
+      <!-- Placeholder background. Sostituire con images/hero/hero-1.jpg quando disponibile -->
+      <div class="img-placeholder" style="width:100%;height:100%;">Hero photo</div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__label" data-i18n="hero.label">Custoza, Verona — Italia</span>
+      <h1 class="hero__title" data-i18n="hero.title">Il Metrone</h1>
+      <p class="hero__subtitle" data-i18n="hero.subtitle">Una dimora di campagna immersa nelle colline moreniche del Bianco di Custoza.</p>
+      <div class="hero__actions">
+        <a href="book.html" class="btn btn--primary" data-i18n="hero.cta.book">Verifica disponibilità</a>
+        <a href="#property" class="btn btn--outline" data-i18n="hero.cta.discover">Scopri la dimora</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES (3 CARDS) ════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="features reveal-stagger">
+        <div class="feature-card">
+          <div class="feature-card__img"><div class="img-placeholder" style="width:100%;height:100%;">Vineyards</div></div>
+          <div class="feature-card__content">
+            <h3 class="feature-card__title" data-i18n="features.0.title">Tra i vigneti</h3>
+            <p class="feature-card__text" data-i18n="features.0.text">Filari di Garganega e Trebbiano che si perdono all'orizzonte.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__img"><div class="img-placeholder" style="width:100%;height:100%;">Verona</div></div>
+          <div class="feature-card__content">
+            <h3 class="feature-card__title" data-i18n="features.1.title">Custoza & Verona</h3>
+            <p class="feature-card__text" data-i18n="features.1.text">A 20 minuti dall'Arena, 10 dal Lago di Garda.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__img"><div class="img-placeholder" style="width:100%;height:100%;">Tower</div></div>
+          <div class="feature-card__content">
+            <h3 class="feature-card__title" data-i18n="features.2.title">Storia viva</h3>
+            <p class="feature-card__text" data-i18n="features.2.text">La Torre di Custoza, i campi del Risorgimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ INTRO ════════════ -->
+  <section class="section section--alt">
+    <div class="container container--narrow" style="text-align:center;">
+      <span class="label reveal" data-i18n="intro.label">Benvenuti</span>
+      <h2 class="reveal" style="margin-top:1rem;" data-i18n="intro.title">Una pausa autentica tra le colline veronesi</h2>
+      <div class="divider divider--center reveal"></div>
+      <p class="reveal" style="margin:0 auto 1.25rem;" data-i18n="intro.p1">Il Metrone è una casa di famiglia trasformata con cura in un rifugio elegante e accogliente.</p>
+      <p class="reveal" style="margin:0 auto 2rem;" data-i18n="intro.p2">Qui troverete il vostro tempo — lento, profondo, italiano.</p>
+      <a href="#property" class="btn btn--accent reveal" data-i18n="intro.cta">Esplora la proprietà</a>
+    </div>
+  </section>
+
+  <!-- ════════════ PROPERTY ════════════ -->
+  <section class="section" id="property">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label" data-i18n="property.label">La proprietà</span>
+        <h2 data-i18n="property.title">Spazi e ambienti</h2>
+        <p data-i18n="property.subtitle">Ogni angolo racconta una storia di restauro rispettoso e gusto contemporaneo.</p>
+      </div>
+
+      <!-- Block 1: Rooms -->
+      <div class="two-col reveal" style="margin-bottom: var(--space-xl);">
+        <div><div class="two-col__img img-placeholder" style="aspect-ratio:4/5;">Camera</div></div>
+        <div class="two-col__content">
+          <span class="label" data-i18n="property.label">La proprietà</span>
+          <h3 data-i18n="property.rooms.title">Le camere</h3>
+          <p data-i18n="property.rooms.text">Camere luminose con travi a vista, biancheria di lino, letti king-size.</p>
+        </div>
+      </div>
+
+      <!-- Block 2: Living -->
+      <div class="two-col two-col--reverse reveal" style="margin-bottom: var(--space-xl);">
+        <div><div class="two-col__img img-placeholder" style="aspect-ratio:4/5;">Soggiorno</div></div>
+        <div class="two-col__content">
+          <span class="label" data-i18n="property.label">La proprietà</span>
+          <h3 data-i18n="property.living.title">Soggiorno e cucina</h3>
+          <p data-i18n="property.living.text">Una cucina completamente attrezzata, un grande tavolo conviviale.</p>
+        </div>
+      </div>
+
+      <!-- Block 3: Garden -->
+      <div class="two-col reveal">
+        <div><div class="two-col__img img-placeholder" style="aspect-ratio:4/5;">Giardino</div></div>
+        <div class="two-col__content">
+          <span class="label" data-i18n="property.label">La proprietà</span>
+          <h3 data-i18n="property.garden.title">Giardino e piscina</h3>
+          <p data-i18n="property.garden.text">Un giardino curato con olivi secolari e una piscina riscaldata.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ AMENITIES ════════════ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label" data-i18n="amenities.label">Servizi</span>
+        <h2 data-i18n="amenities.title">Tutto ciò che serve</h2>
+      </div>
+      <div class="amenities reveal-stagger">
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg><div><div class="amenity__title" data-i18n="amenities.wifi">Wi-Fi gigabit</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="7" cy="16" r="1"/><circle cx="17" cy="16" r="1"/><path d="M5 11l1.5-5h11L19 11"/></svg><div><div class="amenity__title" data-i18n="amenities.parking">Parcheggio privato</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/><path d="M2 15s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/></svg><div><div class="amenity__title" data-i18n="amenities.pool">Piscina riscaldata</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M5 6h14M5 18h14"/></svg><div><div class="amenity__title" data-i18n="amenities.ac">Aria condizionata</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v6a3 3 0 0 0 3 3h0a3 3 0 0 0 3-3V2M9 11v11M15 2c2 0 3 1 3 4s-1 5-3 5v11"/></svg><div><div class="amenity__title" data-i18n="amenities.kitchen">Cucina attrezzata</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="M8 9V5a4 4 0 0 1 8 0v4"/></svg><div><div class="amenity__title" data-i18n="amenities.bbq">Barbecue in giardino</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h20l-2 12H4z"/><path d="M6 8V6a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2"/></svg><div><div class="amenity__title" data-i18n="amenities.linen">Biancheria di lino</div></div></div>
+        <div class="amenity"><svg class="amenity__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18M3 12h18"/></svg><div><div class="amenity__title" data-i18n="amenities.welcome">Welcome basket</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SURROUNDINGS ════════════ -->
+  <section class="section" id="surroundings">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label" data-i18n="surroundings.label">Custoza & Dintorni</span>
+        <h2 data-i18n="surroundings.title">Un mondo a portata di mano</h2>
+        <p data-i18n="surroundings.subtitle">La posizione del Metrone è il suo segreto meglio custodito.</p>
+      </div>
+
+      <div class="features reveal-stagger">
+        <div class="feature-card">
+          <div class="feature-card__img"><div class="img-placeholder" style="width:100%;height:100%;">Verona</div></div>
+          <div class="feature-card__content">
+            <h3 class="feature-card__title" data-i18n="surroundings.verona.title">Verona</h3>
+            <p class="feature-card__text" data-i18n="surroundings.verona.text">A 20 minuti dall'Arena.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__img"><div class="img-placeholder" style="width:100%;height:100%;">Lago di Garda</div></div>
+          <div class="feature-card__content">
+            <h3 class="feature-card__title" data-i18n="surroundings.garda.title">Lago di Garda</h3>
+            <p class="feature-card__text" data-i18n="surroundings.garda.text">Peschiera e Lazise a 10 minuti.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__img"><div class="img-placeholder" style="width:100%;height:100%;">Cantine</div></div>
+          <div class="feature-card__content">
+            <h3 class="feature-card__title" data-i18n="surroundings.wine.title">Strada del Vino</h3>
+            <p class="feature-card__text" data-i18n="surroundings.wine.text">Cantine e olivete a pochi passi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top: var(--space-xl);">
+        <div class="map-wrap">
+          <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Custoza,+Sommacampagna+VR,+Italy&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ STORY ════════════ -->
+  <section class="section section--alt" id="story">
+    <div class="container container--narrow" style="text-align:center;">
+      <span class="label reveal" data-i18n="story.label">La storia</span>
+      <h2 class="reveal" style="margin-top:1rem;" data-i18n="story.title">Da casa di famiglia a luogo dell'anima</h2>
+      <div class="divider divider--center reveal"></div>
+      <p class="reveal" style="margin:0 auto 1.25rem;" data-i18n="story.p1">Il Metrone nasce nel cuore della campagna di Custoza.</p>
+      <p class="reveal" style="margin:0 auto;" data-i18n="story.p2">Dopo un restauro pluriennale abbiamo aperto la casa agli ospiti.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ GALLERY ════════════ -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label" data-i18n="gallery.label">Galleria</span>
+        <h2 data-i18n="gallery.title">Uno sguardo su Il Metrone</h2>
+      </div>
+      <div class="gallery reveal">
+        <div class="gallery__item gallery__item--wide"><img src="images/gallery/01.jpg" alt="Il Metrone — esterno" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot; style=&quot;width:100%;height:100%;&quot;>Foto 1</div>'"></div>
+        <div class="gallery__item gallery__item--tall"><img src="images/gallery/02.jpg" alt="Il Metrone — vigneti" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot; style=&quot;width:100%;height:100%;&quot;>Foto 2</div>'"></div>
+        <div class="gallery__item"><img src="images/gallery/03.jpg" alt="Il Metrone — camera" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot; style=&quot;width:100%;height:100%;&quot;>Foto 3</div>'"></div>
+        <div class="gallery__item"><img src="images/gallery/04.jpg" alt="Il Metrone — cucina" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot; style=&quot;width:100%;height:100%;&quot;>Foto 4</div>'"></div>
+        <div class="gallery__item"><img src="images/gallery/05.jpg" alt="Il Metrone — giardino" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot; style=&quot;width:100%;height:100%;&quot;>Foto 5</div>'"></div>
+        <div class="gallery__item"><img src="images/gallery/06.jpg" alt="Il Metrone — piscina" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot; style=&quot;width:100%;height:100%;&quot;>Foto 6</div>'"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CONTACT ════════════ -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label" data-i18n="contact.label">Contatti</span>
+        <h2 data-i18n="contact.title">Parliamone</h2>
+        <p data-i18n="contact.subtitle">Per disponibilità, prenotazioni o richieste speciali.</p>
+      </div>
+      <div class="contact-block reveal-stagger">
+        <div class="contact-item">
+          <div class="contact-item__label" data-i18n="contact.email.label">Email</div>
+          <div class="contact-item__value"><a href="mailto:metronecustoza@gmail.com">metronecustoza@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__label" data-i18n="contact.phone.label">Telefono</div>
+          <div class="contact-item__value"><a href="tel:+390000000000">+39 000 000 0000</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__label" data-i18n="contact.address.label">Indirizzo</div>
+          <div class="contact-item__value" data-i18n="contact.address.value">Custoza, Sommacampagna (VR), Italia</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__label" data-i18n="contact.hours.label">Check-in</div>
+          <div class="contact-item__value" data-i18n="contact.hours.value">16:00 – 20:00 / Check-out entro le 10:00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA ════════════ -->
+  <section class="cta-banner">
+    <h2 data-i18n="cta.title">Pronti a venire?</h2>
+    <p data-i18n="cta.text">Verificate la disponibilità e prenotate direttamente.</p>
+    <a href="book.html" class="btn btn--primary" data-i18n="cta.button">Prenota Ora</a>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Il <span>Metrone</span></div>
+          <p class="footer__desc" data-i18n="footer.tagline">Una dimora tra i vigneti del Bianco di Custoza.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="mailto:metronecustoza@gmail.com" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__title" data-i18n="footer.explore">Esplora</div>
+          <ul class="footer__links">
+            <li><a href="#property" data-i18n="nav.property">La Proprietà</a></li>
+            <li><a href="#surroundings" data-i18n="nav.surroundings">Custoza & Dintorni</a></li>
+            <li><a href="#story" data-i18n="nav.story">La Storia</a></li>
+            <li><a href="#gallery" data-i18n="nav.gallery">Galleria</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title" data-i18n="footer.contact">Contatti</div>
+          <ul class="footer__links">
+            <li><a href="mailto:metronecustoza@gmail.com">metronecustoza@gmail.com</a></li>
+            <li><a href="tel:+390000000000">+39 000 000 0000</a></li>
+            <li data-i18n="contact.address.value">Custoza, Sommacampagna (VR)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title" data-i18n="footer.legal">Legale</div>
+          <ul class="footer__links">
+            <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer.terms">Termini</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div data-i18n="footer.copyright">© <span data-year>2026</span> Il Metrone Custoza. Tutti i diritti riservati.</div>
+        <div>Custoza · Sommacampagna · Verona</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

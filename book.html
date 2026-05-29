@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prenota — Il Metrone Custoza</title>
+  <meta name="description" content="Verifica la disponibilità e prenota direttamente Il Metrone Custoza. Nessuna commissione, ospitalità autentica.">
+  <meta property="og:title" content="Prenota — Il Metrone Custoza">
+  <meta property="og:description" content="Verifica la disponibilità e prenota direttamente.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.metronecustoza.com/book.html">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="booking-engine/styles.css">
+  <style>
+    .booking-layout {
+      display: flex; flex-direction: column;
+      gap: var(--space-xl);
+      max-width: 860px; margin: 0 auto;
+    }
+    .booking-layout .booking-widget {
+      box-shadow: none;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      padding: var(--space-lg) var(--space-xl);
+      max-width: 100%;
+    }
+    .booking-info-blocks {
+      display: flex; flex-direction: column; gap: var(--space-md);
+    }
+    @media (min-width: 640px) {
+      .available-gaps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
+    }
+    .policy-list { list-style: none; padding: 0; }
+    .policy-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.95rem; color: var(--color-text-light); line-height: 1.6; }
+    .policy-list li:last-child { border-bottom: none; }
+    .policy-list strong { color: var(--color-black); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <strong>Il Metrone</strong>
+        <small>Custoza · Verona</small>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html#property" class="nav__link" data-i18n="nav.property">La Proprietà</a></li>
+        <li><a href="index.html#surroundings" class="nav__link" data-i18n="nav.surroundings">Custoza & Dintorni</a></li>
+        <li><a href="index.html#story" class="nav__link" data-i18n="nav.story">La Storia</a></li>
+        <li><a href="index.html#gallery" class="nav__link" data-i18n="nav.gallery">Galleria</a></li>
+        <li><a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Contatti</a></li>
+      </ul>
+      <div class="nav__right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="it">IT</button><span>·</span>
+          <button type="button" data-lang="en">EN</button><span>·</span>
+          <button type="button" data-lang="de">DE</button>
+        </div>
+        <a href="book.html" class="nav__cta" data-i18n="nav.book">Prenota</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <a href="index.html#property" data-i18n="nav.property">La Proprietà</a>
+    <a href="index.html#surroundings" data-i18n="nav.surroundings">Custoza & Dintorni</a>
+    <a href="index.html#story" data-i18n="nav.story">La Storia</a>
+    <a href="index.html#gallery" data-i18n="nav.gallery">Galleria</a>
+    <a href="index.html#contact" data-i18n="nav.contact">Contatti</a>
+    <a href="book.html" class="btn btn--dark" data-i18n="nav.book">Prenota</a>
+    <div class="lang-switch">
+      <button type="button" data-lang="it">IT</button><span>·</span>
+      <button type="button" data-lang="en">EN</button><span>·</span>
+      <button type="button" data-lang="de">DE</button>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <span class="label page-header__label" data-i18n="book.label">Prenota</span>
+    <h1 class="page-header__title" data-i18n="book.title">Verifica disponibilità</h1>
+    <p class="page-header__desc" data-i18n="book.desc">Seleziona le date del tuo soggiorno e invia la richiesta. Risponderemo entro 24 ore.</p>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="section">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Booking Widget -->
+        <div class="booking-widget">
+
+          <div class="progress-bar">
+            <div class="progress-step active">
+              <span class="step-dot"></span>
+              <span class="step-label" data-i18n="booking.checkin">Date</span>
+            </div>
+            <span class="progress-connector"></span>
+            <div class="progress-step">
+              <span class="step-dot"></span>
+              <span class="step-label" data-i18n="booking.guestDetails">Dati</span>
+            </div>
+            <span class="progress-connector"></span>
+            <div class="progress-step">
+              <span class="step-dot"></span>
+              <span class="step-label" data-i18n="booking.reviewConfirm">Conferma</span>
+            </div>
+            <span class="progress-connector"></span>
+            <div class="progress-step">
+              <span class="step-dot"></span>
+              <span class="step-label" data-i18n="booking.requestSent">Fatto</span>
+            </div>
+          </div>
+
+          <!-- STEP 1: CALENDAR -->
+          <div id="step-calendar" class="step active">
+            <h2 data-i18n="booking.selectDates">Seleziona le tue date</h2>
+            <p class="subtitle" data-i18n="booking.minStayInfo">Soggiorno minimo: 2 notti</p>
+
+            <div class="available-gaps-section">
+              <h4 data-i18n="booking.availablePeriods">Periodi disponibili</h4>
+              <div class="available-gaps" id="available-gaps">
+                <div class="calendar-loader" style="padding:8px;">
+                  <span class="spinner"></span>
+                  <span style="font-size:13px;" data-i18n="booking.loading">Caricamento...</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="calendar-container">
+              <div class="calendar-header">
+                <button class="nav-btn" id="prev-month" aria-label="Previous month">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <h3 id="current-month"></h3>
+                <button class="nav-btn" id="next-month" aria-label="Next month">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+              <div class="calendar-grid" id="calendar-grid"></div>
+              <div class="calendar-legend">
+                <div class="legend-item"><span class="legend-dot available"></span> <span data-i18n="booking.available">Disponibile</span></div>
+                <div class="legend-item"><span class="legend-dot blocked"></span> <span data-i18n="booking.booked">Occupato</span></div>
+                <div class="legend-item"><span class="legend-dot selected"></span> <span data-i18n="booking.selected">Selezionato</span></div>
+              </div>
+            </div>
+
+            <div class="calendar-loader" id="calendar-loader">
+              <span class="spinner"></span> <span data-i18n="booking.loading">Caricamento...</span>
+            </div>
+
+            <p class="selection-hint" id="selection-hint" data-i18n="booking.hintCheckin">Seleziona la data di check-in</p>
+            <div class="date-error" id="date-error"></div>
+
+            <div class="selected-dates">
+              <div class="date-box">
+                <label data-i18n="booking.checkin">Check-in</label>
+                <span id="checkin-display" data-i18n="booking.selectDate">Seleziona data</span>
+              </div>
+              <div class="nights-display" id="nights-display" style="display:none;">
+                <span id="nights-count"></span> <span data-i18n="booking.nights">notti</span>
+              </div>
+              <div class="date-box">
+                <label data-i18n="booking.checkout">Check-out</label>
+                <span id="checkout-display" data-i18n="booking.selectDate">Seleziona data</span>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <button class="btn-primary" id="continue-to-guests" disabled data-i18n="booking.continue">Continua</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: GUEST DETAILS -->
+          <div id="step-guests" class="step">
+            <button class="back-btn" onclick="goToStep('calendar')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <span data-i18n="booking.backToCal">Torna al calendario</span>
+            </button>
+            <h2 data-i18n="booking.guestDetails">Dati ospiti</h2>
+            <p class="subtitle" data-i18n="booking.tellGroup">Raccontaci del tuo gruppo</p>
+            <div class="dates-mini-summary" id="dates-mini-summary"></div>
+            <form id="guest-form">
+              <div class="form-group">
+                <label for="guest-name" data-i18n="booking.fullName">Nome completo</label>
+                <input type="text" id="guest-name" data-i18n-ph="booking.fullNamePh" placeholder="Il tuo nome" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guest-email" data-i18n="booking.email">Email</label>
+                  <input type="email" id="guest-email" data-i18n-ph="booking.emailPh" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="guest-phone" data-i18n="booking.phone">Telefono</label>
+                  <input type="tel" id="guest-phone" data-i18n-ph="booking.phonePh" placeholder="+39 123 456 7890" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="num-adults" data-i18n="booking.adults">Adulti</label>
+                  <select id="num-adults">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="num-children" data-i18n="booking.children">Bambini</label>
+                  <select id="num-children">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="warning-message" id="guest-limit-warning">
+                <span data-i18n="booking.maxGuests">Massimo 6 ospiti totali</span>
+              </div>
+              <div class="form-group">
+                <label for="pets" data-i18n="booking.pets">In viaggio con un animale?</label>
+                <select id="pets">
+                  <option value="no" data-i18n="booking.petsNo">No</option>
+                  <option value="yes" data-i18n="booking.petsYes">Sì</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="special-requests" data-i18n="booking.specialRequests">Richieste speciali</label>
+                <textarea id="special-requests" data-i18n-ph="booking.specialRequestsPh" placeholder="Qualsiasi richiesta..." rows="3"></textarea>
+              </div>
+            </form>
+            <button class="btn-primary" id="continue-to-policy" data-i18n="booking.reviewConfirm">Verifica e conferma</button>
+          </div>
+
+          <!-- STEP 3: SUMMARY + POLICY -->
+          <div id="step-policy" class="step">
+            <button class="back-btn" onclick="goToStep('guests')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <span data-i18n="booking.backToDetails">Torna ai dati</span>
+            </button>
+            <h2 data-i18n="booking.reviewTitle">Verifica la prenotazione</h2>
+            <p class="subtitle" data-i18n="booking.reviewSubtitle">Controlla i dati e accetta le condizioni</p>
+            <div class="summary-card">
+              <h3 data-i18n="booking.summary">Riepilogo</h3>
+              <div class="summary-row"><span data-i18n="booking.guest">Ospite</span><strong id="summary-name"></strong></div>
+              <div class="summary-row"><span data-i18n="booking.email">Email</span><strong id="summary-email"></strong></div>
+              <div class="summary-row"><span data-i18n="booking.checkin">Check-in</span><strong id="summary-checkin"></strong></div>
+              <div class="summary-row"><span data-i18n="booking.checkout">Check-out</span><strong id="summary-checkout"></strong></div>
+              <div class="summary-row"><span data-i18n="booking.duration">Durata</span><strong id="summary-nights"></strong></div>
+              <div class="summary-row"><span data-i18n="booking.guests">Ospiti</span><strong id="summary-guests"></strong></div>
+              <div class="summary-row"><span data-i18n="booking.pets">Animali</span><strong id="summary-pets"></strong></div>
+            </div>
+            <div class="policy-section">
+              <h3 data-i18n="book.policiesTitle">Condizioni</h3>
+              <ul class="policy-list" style="margin-top:1rem;">
+                <li data-i18n-html="book.policy.deposit"><strong>Caparra:</strong> 30%</li>
+                <li data-i18n-html="book.policy.balance"><strong>Saldo:</strong> 21 giorni prima</li>
+                <li data-i18n-html="book.policy.cancel"><strong>Cancellazione:</strong> rimborso completo</li>
+                <li data-i18n-html="book.policy.tax"><strong>Tassa di soggiorno:</strong> €1,50</li>
+                <li data-i18n-html="book.policy.id"><strong>Documento:</strong> richiesto</li>
+                <li data-i18n-html="book.policy.pets"><strong>Animali:</strong> su richiesta</li>
+              </ul>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="accept-policy">
+                <span data-i18n="booking.acceptPolicy">Ho letto e accetto le condizioni. Riceverò conferma entro 24 ore.</span>
+              </label>
+            </div>
+            <button class="btn-primary" id="send-request" disabled data-i18n="booking.sendRequest">Invia richiesta</button>
+          </div>
+
+          <!-- STEP 4: CONFIRMATION -->
+          <div id="step-confirmation" class="step">
+            <div class="confirmation-content">
+              <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h2 data-i18n="booking.requestSent">Richiesta inviata!</h2>
+              <p><span data-i18n="booking.thanks">Grazie per aver scelto Il Metrone. Ti risponderemo a</span> <strong id="confirmation-email"></strong>.</p>
+              <p class="confirmation-note" data-i18n="booking.checkSpam">Controlla la cartella spam se non ricevi nostra mail.</p>
+              <button class="btn-secondary" onclick="resetWidget()" data-i18n="booking.anotherBooking">Nuova prenotazione</button>
+            </div>
+          </div>
+
+        </div><!-- /.booking-widget -->
+
+        <!-- HOW TO BOOK + POLICIES -->
+        <div class="booking-info-blocks">
+
+          <div class="booking-card reveal" style="background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-lg);">
+            <h3 class="booking-card__title" style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:var(--space-sm);" data-i18n="book.howTitle">Come prenotare</h3>
+            <div class="booking-highlight" style="background:var(--color-surface);border-left:3px solid var(--color-primary);padding:var(--space-md);margin:var(--space-md) 0;">
+              <div class="booking-highlight__title" style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-primary);margin-bottom:0.5rem;" data-i18n="book.howDirect">Prenotazione diretta — la scelta migliore</div>
+              <p style="font-size:0.95rem;color:var(--color-text-light);line-height:1.7;" data-i18n="book.howDirectText">Compila il modulo o scrivici a metronecustoza@gmail.com. Nessuna commissione.</p>
+            </div>
+          </div>
+
+          <div class="booking-card reveal" style="background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-lg);">
+            <h3 class="booking-card__title" style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:var(--space-sm);" data-i18n="book.policiesTitle">Condizioni</h3>
+            <ul class="policy-list" style="margin-top:1rem;">
+              <li data-i18n-html="book.policy.deposit"><strong>Caparra:</strong> 30%</li>
+              <li data-i18n-html="book.policy.balance"><strong>Saldo:</strong> 21 giorni prima</li>
+              <li data-i18n-html="book.policy.cancel"><strong>Cancellazione:</strong> rimborso completo</li>
+              <li data-i18n-html="book.policy.tax"><strong>Tassa di soggiorno:</strong> €1,50</li>
+              <li data-i18n-html="book.policy.id"><strong>Documento:</strong> richiesto</li>
+              <li data-i18n-html="book.policy.pets"><strong>Animali:</strong> su richiesta</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer minimal -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top:none;padding-top:0;">
+        <div data-i18n="footer.copyright">© <span data-year>2026</span> Il Metrone Custoza.</div>
+        <div><a href="index.html" style="color:rgba(255,255,255,0.7);">metronecustoza.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="booking-engine/calendar.js"></script>
+  <script>
+    // Mini-summary su step 'guests'
+    var _origGoToStep = goToStep;
+    goToStep = function(name) {
+      _origGoToStep(name);
+      if (name === 'guests' && state.checkInDate && state.checkOutDate) {
+        var nights = calculateNights(state.checkInDate, state.checkOutDate);
+        var nLabel = (window.i18n && window.i18n.t) ? window.i18n.t(nights > 1 ? 'booking.nights' : 'booking.night') : (nights > 1 ? 'nights' : 'night');
+        var el = document.getElementById('dates-mini-summary');
+        if (el) {
+          el.innerHTML = '<strong>' + formatDateDisplay(state.checkInDate) + '</strong>'
+            + ' &nbsp;&rarr;&nbsp; <strong>' + formatDateDisplay(state.checkOutDate) + '</strong>'
+            + ' &nbsp;&middot;&nbsp; ' + nights + ' ' + nLabel;
+        }
+      }
+    };
+  </script>
+</body>
+</html>
